@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-
+import {Clock} from './clock';
 
 const Root = () => {
-        return (<h1>Am here</h1>);
+        return (
+            <Clock />
+        );
 }
 
 
