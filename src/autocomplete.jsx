@@ -36,10 +36,10 @@ export class Autocomplete extends React.Component {
         let items = this.getNames().map(nam => <li id={nam} onClick={this.selectName}>{nam}</li>)
         return(
             <div>
+                <h1>Autocomplete</h1>
                 <input type="text" value={this.state.inputVal} onChange={this.handleChange} />
                 <ul>{items}</ul>
             </div>
-            
         );
     }
 }
