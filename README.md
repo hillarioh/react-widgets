@@ -1,8 +1,8 @@
 # react-widgets
-This project is about building four simple widgets. We will be building a clock, interactive tabs, a weather widget, and a simple search component.
+This project is about building a responsive page containing four simple widgets. They include a clock, interactive tabs, a weather widget, and a simple search component.
 
 ## Livelink
-[Live demo](https://stoic-euclid-f29c9e.netlify.app/)
+[Live demo](https://affectionate-elion-321924.netlify.app/)
 
 ## Screenshot
 ![screenshot1](./screenshot.png)
