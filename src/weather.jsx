@@ -7,7 +7,6 @@ export class Weather extends React.Component {
             city: '',
             temp: ''
         };
-        this.setWeather=this.setWeather.bind(this);
         this.success = this.success.bind(this)
     }
 
@@ -22,7 +21,6 @@ export class Weather extends React.Component {
     success(position) {
         const latitude  = position.coords.latitude;
         const longitude = position.coords.longitude;
-        let output = '';
 
       const makeRequest = new Promise((resolve, reject) => {
           fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=b34fddd3dae4a2eb0ad363b62f98ba1e`,{
@@ -45,24 +43,11 @@ export class Weather extends React.Component {
             });
       });
 
-      
-
-    //   this.setState({
-    //     city: output.name,
-    //     temp: Math.trunc(output.main.temp - 273) 
-    // });
     }
 
-    setWeather(result){
-        this.setState({
-            city: result.name,
-            temp: Math.trunc(result.main.temp - 273) 
-        });
+    error() {
+       console.log('Unable to retrieve your location');
     }
-    
-      error() {
-        console.log('Unable to retrieve your location');
-      }
 
     
     render(){
@@ -70,9 +55,9 @@ export class Weather extends React.Component {
         return(
             <div>
                 <h1>Weather</h1>
-                <p>
+                <p className="weather-body">
                     <span>{this.state.city}</span>
-                    <span>{this.state.temp}</span>
+                    <span>{this.state.temp}°C</span>
                 </p>
             </div>
         );

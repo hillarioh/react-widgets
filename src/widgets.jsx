@@ -17,10 +17,14 @@ const tabs = [{
 
 const Root = () => {
         return (
-            <div>
-                <Clock />
-                <Tab tabs={tabs}/>
-                <Weather />
+            <div className="main">
+                
+                <Tab style={{flexGrow:1}}  tabs={tabs}/>
+                <div style={{flexGrow:1}}>
+                    <Clock />
+                    <Weather />
+                </div>
+                
             </div>
             
         );
