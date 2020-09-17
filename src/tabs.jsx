@@ -18,9 +18,10 @@ export class Tab extends React.Component {
     render(){
         return(
             <div className="tabs">
+                <h1>Tabs</h1>
                 <ul className="list-title">
-        <li className="list-content" id="0" onClick={this.clicked}>{this.props.tabs[0].title}</li>
-        <li className="list-content" id="1" onClick={this.clicked}>{this.props.tabs[1].title}</li>
+        <li  className="list-content" id="0" onClick={this.clicked}>{this.props.tabs[0].title}</li>
+        <li  className="list-content" id="1" onClick={this.clicked}>{this.props.tabs[1].title}</li>
         <li className="list-content" id="2" onClick={this.clicked}>{this.props.tabs[2].title}</li>
                 </ul>
                 <article className="content">
