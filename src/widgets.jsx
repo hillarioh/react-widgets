@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Clock} from './clock';
 import {Tab} from './tabs';
-
+import {Weather} from './weather';
 
 const tabs = [{
     title: "jan",
@@ -17,9 +17,14 @@ const tabs = [{
 
 const Root = () => {
         return (
-            <div>
-                <Clock />
-                <Tab tabs={tabs}/>
+            <div className="main">
+                
+                <Tab style={{flexGrow:1}}  tabs={tabs}/>
+                <div style={{flexGrow:1}}>
+                    <Clock />
+                    <Weather />
+                </div>
+                
             </div>
             
         );
