@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Clock} from './clock';
 import {Tab} from './tabs';
 import {Weather} from './weather';
+import {Autocomplete} from './autocomplete';
 
 const tabs = [{
     title: "jan",
@@ -15,16 +16,29 @@ const tabs = [{
     content: "I am march"
 }];
 
+const styles = {
+    flexGrow: 1,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+    
+}
+
+const names = ["lewis","Lecrae","fello","safar","elijah","anand","taiwo","abdulaye","joy","chris"];
+
 const Root = () => {
         return (
             <div className="main">
-                
-                <Tab style={{flexGrow:1}}  tabs={tabs}/>
-                <div style={{flexGrow:1}}>
+                <div style={styles}><Tab tabs={tabs}/></div>
+                <div style={styles}>
+                    <div className="middle">
                     <Clock />
                     <Weather />
+                    </div>
                 </div>
-                
+                <div style={styles}>
+                    <div className="last"><Autocomplete names={names} /></div>
+                    </div>
             </div>
             
         );

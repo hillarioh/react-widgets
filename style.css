@@ -9,6 +9,16 @@ body{
 .main {
     display: flex;
     height: 100vh;
+    flex-wrap: wrap;
+    align-items: 'center';
+}
+
+.middle{
+    width: 90%;
+}
+
+.last{
+    height: 350px;
 }
 
 .clock {
@@ -37,7 +47,7 @@ body{
 }
 
 .tabs {
-    width: 240px;
+    width: 300px;
 }
 
 .content {
@@ -55,13 +65,13 @@ body{
     margin: 0;
 }
 
-ul{
+.list-title{
     display: flex;
     padding: 0;
     margin: 0;
 }
 
-li{
+.list-content{
     list-style: none;
     padding: 4px 14px;
     border: 2px solid black;
@@ -71,6 +81,11 @@ li{
     flex-grow: 1;
 }
 
+.list-content:active{
+    /* border-bottom-style: none; */
+}
+
 li:hover{
     cursor: pointer;
 }
+
