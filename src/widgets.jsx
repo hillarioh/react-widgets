@@ -16,18 +16,29 @@ const tabs = [{
     content: "I am march"
 }];
 
+const styles = {
+    flexGrow: 1,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+    
+}
+
 const names = ["lewis","Lecrae","fello","safar","elijah","anand","taiwo","abdulaye","joy","chris"];
 
 const Root = () => {
         return (
             <div className="main">
-                
-                <div style={{flexGrow:1}}><Tab tabs={tabs}/></div>
-                <div style={{flexGrow:1}}>
+                <div style={styles}><Tab tabs={tabs}/></div>
+                <div style={styles}>
+                    <div className="middle">
                     <Clock />
                     <Weather />
+                    </div>
                 </div>
-                <div style={{flexGrow:1}}><Autocomplete names={names} /></div>
+                <div style={styles}>
+                    <div className="last"><Autocomplete names={names} /></div>
+                    </div>
             </div>
             
         );

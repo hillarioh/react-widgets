@@ -10,6 +10,15 @@ body{
     display: flex;
     height: 100vh;
     flex-wrap: wrap;
+    align-items: 'center';
+}
+
+.middle{
+    width: 90%;
+}
+
+.last{
+    height: 350px;
 }
 
 .clock {
@@ -38,7 +47,7 @@ body{
 }
 
 .tabs {
-    width: 240px;
+    width: 300px;
 }
 
 .content {
@@ -72,6 +81,11 @@ body{
     flex-grow: 1;
 }
 
+.list-content:active{
+    /* border-bottom-style: none; */
+}
+
 li:hover{
     cursor: pointer;
 }
+
